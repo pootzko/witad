@@ -1,11 +1,23 @@
 ﻿public class AnomalyDetectionModel
 {
+    /// <summary>
+    /// Log data of the anomaly detection run.
+    /// </summary>
     public string StdOut { get; set; }
 
+    /// <summary>
+    /// Plot image (base64 encoded).
+    /// </summary>
     public string Plot { get; set; }
 
+    /// <summary>
+    /// Detected anomaly values. Row of time/value per detected value.
+    /// </summary>
     public IEnumerable<IEnumerable<string>> AnomalyValues { get; set; }
 
+    /// <summary>
+    /// Potential error messages.
+    /// </summary>
     public AnomalyDetectionErrorModel Error { get; set; }
 }
 
